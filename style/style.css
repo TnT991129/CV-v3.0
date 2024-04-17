@@ -1,0 +1,228 @@
+:root{
+    --fuente_titulo: "Kode Mono", monospace;
+
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.header{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(22, 22, 22, 0.836);
+    color: rgb(255, 255, 255);
+    align-content: center;
+    text-align: center;
+    overflow:hidden;
+    position: relative;
+}
+.container_center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fuente_titulo);
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    align-content: center;
+    font-size: 1.7rem;
+    z-index: 10;
+}
+.container_center h1{
+    z-index: 30;
+}
+.container_center span{
+    color: rgb(252, 30, 122);
+}
+.container_center span:before{
+    content:"";
+    border-bottom: solid 5px  rgb(252, 30, 122);
+    position: absolute;
+    width: 0;
+    padding-top: 4rem;
+    animation: barra_inferior 5s infinite 1s;
+    
+}
+@keyframes barra_inferior {
+    0%{
+        width: 0%;
+        transition: ease-in-out 5s;
+    }
+
+    50%{
+        width: 250px;
+        transition: ease-in-out 2s;
+    }
+    100%{
+        width: 0%;
+        transition: ease-in-out 5s;
+    }
+}
+.options{
+    display: flex;
+    gap: 1rem;
+}
+.boton_inicio{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3rem;
+    font-size: 1.3rem;
+    border: solid 2px aliceblue;
+    width: 10rem;
+    height: 2.5rem;
+    align-content: center;
+    transition: ease-in .2s;
+    z-index: 40;
+}
+
+.boton_inicio:hover *{
+    color: rgb(252, 30, 122);
+}
+.boton_inicio:hover{
+    transform: scaleX(1.1);
+    border-color:rgb(252, 30, 122) ;
+}
+.boton_inicio a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.back{
+    z-index: 1;
+    overflow: hidden;
+}
+.cuadrado{
+    box-shadow: 0 0 10px rgb(34, 34, 34);
+    border-radius: .5vw;
+}
+.cuadrado_grande{
+    z-index: 1;
+    position: absolute;
+    width: 9vw;
+    height: 9vw;
+    background-color: rgba(101, 151, 60, 0.5);
+}
+.g1{
+    bottom: -10vw;
+    left: 2vw;
+    animation: cuadrado-grande 8s infinite 9s;
+
+}
+.g2{
+    bottom: -10vw;
+    left: 40vw;
+    animation: cuadrado-grande 6s infinite 8s;
+
+}
+.g3{
+    bottom: -10vw;
+    left: 80vw;
+    animation: cuadrado-grande 13s infinite 4s;
+
+}
+.g4{
+    bottom: -10vw;
+    left: 20vw;
+    animation: cuadrado-grande 8s infinite 2s;
+
+}
+
+.cuadrado_mediano{
+    z-index: 0;
+    position: absolute;
+    width: 6vw;
+    height: 6vw;
+    background-color:rgba(255, 166, 0, 0.5);
+}
+.m1{
+
+    bottom: -10vw;
+    left: 3vw;
+    animation: cuadrado-grande 10s infinite 6s;
+}
+.m2{
+    bottom: -10vw;
+    left: 60vw;
+    animation: cuadrado-grande 15s infinite 2s;
+
+}
+.m3{
+    bottom: -10vw;
+    left: 90vw;
+    animation: cuadrado-grande 7s infinite 8s;
+
+}
+.m4{
+    bottom: -10vw;
+    left: 49vw;
+    animation: cuadrado-grande 14s infinite 3s;
+
+}
+.m5{
+    bottom: -10vw;
+    left: 89vw;
+    animation: cuadrado-grande 16s infinite 6s;
+
+}
+.m6{
+    bottom: -10vw;
+    left: 5vw;
+    animation: cuadrado-grande 8s infinite 2s;
+
+}
+.cuadrado_pequegno{
+    position: absolute;
+    width: 3vw;
+    height: 3vw;
+    background-color: rgb(252, 30, 122);
+    z-index: 40;
+}
+.p1{
+    bottom: -10vw;
+    left: 38vw;
+    animation: cuadrado-grande 9s infinite 6s;
+
+}
+.p2{
+    bottom: -10vw;
+    left: 46vw;
+    animation: cuadrado-grande 8s infinite 4.5s;
+    background-color: rgba(23, 218, 253, 0.637);
+
+}
+.p3{
+    bottom: -10vw;
+    left: 84vw;
+    animation: cuadrado-grande 10.6s infinite 2.5s;
+
+}
+.p4{
+    bottom: -10vw;
+    left: 58vw;
+    animation: cuadrado-grande 15.4s infinite 9.2s;
+    background-color: rgba(23, 218, 253, 0.705);
+
+}
+.p5{
+    bottom: -10vw;
+    left: 26vw;
+    animation: cuadrado-grande 20s infinite 0s;
+
+}
+.p6{
+    bottom: -10vw;
+    left: 14vw;
+    animation: cuadrado-grande 7s infinite 2s;
+
+}
+@keyframes cuadrado-grande {
+    0%{
+        transform: translateY(0vw);
+    }
+    100%{
+        transform: translateY(-145vh) rotate(180deg);
+    }
+}
